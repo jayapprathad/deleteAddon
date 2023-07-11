@@ -1,0 +1,9 @@
+<button class="btn btn-outline-success btn-sm" {{action 'confirmation'}}>delete</button>
+
+{{#if this.confirmation}}
+<div>
+    Are you sure?
+    <button {{action "delete" @id}} class="btn btn-outline-danger btn-sm">Yes</button>
+    <button {{action "cancel"}} class="btn btn-outline-danger btn-sm">No</button>
+</div>
+{{/if}}
